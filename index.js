@@ -10,6 +10,9 @@ const helmet = require('helmet')
 const loginRouter = require('./controllers/login')
 const userRouter = require('./controllers/users')
 const facultyReportRouter = require('./controllers/facultyReport')
+const facultyRouter = require('./controllers/faculty')
+const hodReportRouter = require('./controllers/hodReport')
+const deanReportRouter = require('./controllers/deanReport')
 
 const app = express()
 
@@ -27,6 +30,9 @@ app.use(helmet())
 app.use('/api/login', loginRouter)
 app.use('/api/users', userRouter)
 app.use('/api/reports', facultyReportRouter)
+app.use('/api/faculty', facultyRouter)
+app.use('/api/hod', hodReportRouter)
+app.use('/api/dean', deanReportRouter)
 
 app.get('*', (req, res) => {
   res.status(404).json({ error: 'Not Found' })

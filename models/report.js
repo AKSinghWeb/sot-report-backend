@@ -15,6 +15,12 @@ const reportSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.Mixed,
       required: true,
     },
+    publishedBy: {
+      type: String,
+    },
+    departmentName: {
+      type: String,
+    },
   },
   { timestamps: true }
 )
