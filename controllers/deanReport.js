@@ -149,4 +149,7 @@ deanReportRouter.get('/department-reports', async (req, res) => {
     res.status(500).json({ error: 'Error fetching department reports.' })
   }
 })
+
+
+
 module.exports = deanReportRouter
